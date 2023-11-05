@@ -1,0 +1,13 @@
+{# templates/crud/delete.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Confirm Deletion</h1>
+    <p>Are you sure you want to delete this user?</p>
+
+    <form method="post" action="{{ path('user_delete', {'id': user.id}) }}">
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ user.id) }}">
+        <button type="submit">Delete</button>
+    </form>
+{% endblock %}

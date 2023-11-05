@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create New Exercise{% endblock %}
+
+{% block body %}
+    <h1>Create a New Exercise</h1>
+    {{ form_start(form) }}
+    {{ form_row(form.test) }}
+    {{ form_row(form.passwords) }}
+    <button type="submit" class="btn btn-primary">Save</button>
+    {{ form_end(form) }}
+{% endblock %}

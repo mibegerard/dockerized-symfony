@@ -1,0 +1,12 @@
+{# templates/crud/show.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>User Details</h1>
+    <p>Username: {{ user.username }}</p>
+    <p>Password: {{ user.password }}</p>
+
+    <a href="{{ path('user_edit', {'id': user.id}) }}">Edit</a>
+    <a href="{{ path('user_delete', {'id': user.id}) }}">Delete</a>
+{% endblock %}

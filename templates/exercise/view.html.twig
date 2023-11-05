@@ -1,0 +1,18 @@
+{# templates/exercise/view.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Exercise Details{% endblock %}
+
+{% block body %}
+    <h1>Exercise Details</h1>
+    <p>Exercise ID: {{ exercise.id }}</p>
+    <p>Test: {{ exercise.test }}</p>
+    <p>Passwords: {{ exercise.passwords }}</p>
+
+    <a href="{{ path('exercise_edit', {'id': exercise.id}) }}" class="btn btn-primary">Edit Exercise</a>
+    <a href="{{ path('exercise_delete', {'id': exercise.id}) }}" class="btn btn-danger">Delete Exercise</a>
+    <a href="{{ path('exercise_list') }}" class="btn btn-primary">List of Exercises</a>
+
+</div>
+</div>
+{% endblock %}

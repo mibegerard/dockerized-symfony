@@ -1,0 +1,30 @@
+# config/routes.yaml
+
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+exercise_create:
+    path: /exercise/create
+    controller: App\Controller\CrudController::create
+    methods: ['GET', 'POST']
+
+exercise_view:
+    path: /exercise/{id}
+    controller: App\Controller\CrudController::view
+
+exercise_edit:
+    path: /exercise/{id}/edit
+    controller: App\Controller\CrudController::edit
+    methods: ['GET', 'POST']
+
+exercise_delete:
+    path: /exercise/{id}/delete
+    controller: App\Controller\CrudController::delete
+    methods: ['GET', 'POST','DELETE']
+
+exercise_list:
+    path: /exercise
+    controller: App\Controller\CrudController::list
+    methods: ['GET']
+
